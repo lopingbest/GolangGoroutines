@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+//map di sync lebih aman dari race condition
 func AddToMap(data *sync.Map, value int, group *sync.WaitGroup) {
 	defer group.Done()
 
