@@ -13,3 +13,11 @@ func TestTimer(t *testing.T) {
 	time := <-timer.C
 	fmt.Println(time)
 }
+
+func TestAfter(t *testing.T) {
+	channel := time.After(5 * time.Second)
+	fmt.Println(time.Now())
+
+	time := <-channel
+	fmt.Println(time)
+}
